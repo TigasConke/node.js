@@ -48,6 +48,14 @@ app.listen(300, function(erro){ // chamando o servidor, 300 é a porta
 
     })
 
+    app.get("/canal/youtube", function(req,res){
+
+        var canal = req.querry["canal"];
+        res.send("<h1> Bem-vindo ao canal " + canal + "</h1>");
+
+    })
+
+
     if(erro){
         
         console.log("Ocorreu um erro!");
